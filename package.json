@@ -12,8 +12,7 @@
     "url": "https://github.com/oztune/string-replace-to-array/issues"
   },
   "scripts": {
-    "test": "mocha test.js",
-    "prepare": "tsc"
+    "test": "mocha test.js"
   },
   "keywords": [
     "string",
