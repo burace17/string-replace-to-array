@@ -89,7 +89,19 @@ function replaceUsingRegexp (string, regexp, newValueOrFn) {
 	return output
 }
 
-module.exports = function stringReplaceToArray (string, regexpOrSubstr, newSubStrOrFn) {
+/**
+ * 
+ * @typedef {function(string): any} MatchFunction
+ */
+
+/**
+ * 
+ * @param {string|string[]} string 
+ * @param {RegExp|string} regexpOrSubstr 
+ * @param {string|MatchFunction} newSubStrOrFn 
+ * @returns {Array}
+ */
+function stringReplaceToArray (string, regexpOrSubstr, newSubStrOrFn) {
 	if (isString(string)) {
 		return replace(string, regexpOrSubstr, newSubStrOrFn)
 	} else if (!Array.isArray(string) || !string[0]) {
@@ -101,3 +113,5 @@ module.exports = function stringReplaceToArray (string, regexpOrSubstr, newSubSt
 		}))
 	}
 }
+
+module.exports = stringReplaceToArray;
