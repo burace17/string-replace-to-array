@@ -6,7 +6,7 @@ var invariant = require('invariant'),
 
 function replace (string, regexpOrSubstr, newValueOrFn) {
 	invariant(typeof string === 'string', 'First param must be a string')
-	invariant(typeof regexpOrSubstr === 'string' || regexpOrSubstr instanceof RegExp, 'Second param must be a string pattern or a regular expression')
+	//invariant(typeof regexpOrSubstr === 'string' || regexpOrSubstr instanceof RegExp, 'Second param must be a string pattern or a regular expression')
 
 	var fn = (typeof regexpOrSubstr === 'string') ? replaceUsingString : replaceUsingRegexp
 
